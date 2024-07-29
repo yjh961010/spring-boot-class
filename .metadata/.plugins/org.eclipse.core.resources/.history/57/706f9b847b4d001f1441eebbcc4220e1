@@ -1,0 +1,18 @@
+package com.example.test.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.example.test.mapper.BoardMapper;
+
+@Controller
+public class BoardController {
+	@Autowired
+	private BoardMapper boardmapper;
+	@RequestMapping("list_board.do")
+	private String listBoard() {
+		
+	
+	}
+}

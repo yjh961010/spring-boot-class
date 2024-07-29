@@ -1,0 +1,26 @@
+package com.example.test.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.example.test.dto.StudentDTO;
+import com.example.test.repository.StudentDAOImpl;
+
+public class StudentController {
+	@Autowired
+	private StudentDAOImpl studentDAO;
+	
+	@RequestMapping("/list.do")
+	public String list (Model model) {
+		List<StudentDTO> list = studentDAO.listStudent();
+		model.addAttribute("listStudent",list);
+		return "/list";
+	}
+	@RequestMapping("/insertForm.do")
+	public String insertForm() {
+		return "insert";
+	}
+}

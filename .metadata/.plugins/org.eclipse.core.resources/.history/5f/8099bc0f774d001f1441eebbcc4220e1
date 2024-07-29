@@ -1,0 +1,14 @@
+spring.application.name=test-1
+server.servlet.context-path=/test-1
+server.port=8881
+
+spring.mvc.view.prefix=/WEB-INF/Views
+spring.mvc.view.suffix=.jsp
+
+spring.datasource.dbcp2.driver-class-name=oracle.jdbc.OracleDriver
+spring.datasource.url=jdbc:oracle:thin:@localhost:1521:xe
+spring.datasource.username=fin02
+spring.datasource.password=fin02
+
+mybatis.type-aliases-package=com.example.test.dto
+mybatis.mapper-locations=/mybatis/**/*-mapper.xml

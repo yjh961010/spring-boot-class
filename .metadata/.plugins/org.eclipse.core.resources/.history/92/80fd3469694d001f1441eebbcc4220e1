@@ -1,0 +1,10 @@
+package com.example.test.repository;
+
+import java.util.List;
+import com.example.test.dto.StudentDTO;
+public interface StudentDAO {
+	public int insertStudent(StudentDTO dto);
+	public List<StudentDTO> listStudent();
+	public List<StudentDTO> findStudent();
+	public int deleteStudent(String id);
+}

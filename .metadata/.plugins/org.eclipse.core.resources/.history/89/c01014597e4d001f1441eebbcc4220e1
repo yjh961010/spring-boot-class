@@ -1,0 +1,37 @@
+package com.example.test.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.example.test.dto.BoardDTO;
+import com.example.test.mapper.BoardMapper;
+
+@Controller
+public class BoardController {
+	@Autowired
+	private BoardMapper boardmapper;
+	
+	@RequestMapping("/list_board.do")
+	private String listBoard(Model model) {
+		List<BoardDTO>list = boardmapper.listBoard();
+		model.addAttribute("listBoard",list);
+		return "/list";
+	}
+	@GetMapping("/wrtie_board.do")
+	private String wrtie() {
+		return "/writeForm";
+	}
+	
+	@PostMapping("/write_board.do")
+	private String writeBoard(BoardDTO dto) {
+		int res = boardmapper.insertBoard(dto);
+		return "/list";
+		
+	}
+}

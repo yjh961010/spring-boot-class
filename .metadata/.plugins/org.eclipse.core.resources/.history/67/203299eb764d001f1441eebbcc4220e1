@@ -1,0 +1,6 @@
+spring.application.name=test-1
+server.servlet.context-path=/test1
+server.port=8881
+
+spring.mvc.view.prefix=/WEB-INF/Views
+spring.mvc.view.suffix=.jsp

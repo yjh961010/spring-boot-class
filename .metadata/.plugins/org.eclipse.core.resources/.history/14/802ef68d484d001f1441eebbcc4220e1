@@ -1,0 +1,16 @@
+package com.expample.test.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+@Controller
+public class HomeController {
+	
+	@RequestMapping("/")
+	@ResponseBody //웹화면으로 바로나옴
+	public String home() {
+		return "Hello Boot";
+	}
+}

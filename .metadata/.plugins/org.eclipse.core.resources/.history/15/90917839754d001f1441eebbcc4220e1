@@ -1,0 +1,19 @@
+spring.application.name=test
+
+#server 서버 포트 , 주소값변경
+server.servlet.context-path=/test
+server.port=8888
+
+#view reslover
+spring.mvc.view.prefix=/WEB-INF/Views
+spring.mvc.view.suffix=.jsp
+
+#jdbc
+spring.datasource.dbcp2.driver-class-name=oracle.jdbc.OracleDriver
+spring.datasource.url=jdbc:oracle:thin:@localhost:1521:xe
+spring.datasource.username=fin02
+spring.datasource.password=fin02
+
+#mybatis
+mybatis.type-aliases-package=com.example.test.dto
+mybatis.mapper-locations=/bybatis/**/*-mapper.xml

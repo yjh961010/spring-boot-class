@@ -1,0 +1,8 @@
+package com.example.test.repository;
+
+public interface StudentDAO {
+	public int insertStudent(StudnetDTO dto);
+	public List<StudentDTO> listStudent();
+	public List<StudnetDTO> findStudent();
+	public int deleteStudent(String id);
+}

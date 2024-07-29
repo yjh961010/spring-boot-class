@@ -1,0 +1,5 @@
+spring.application.name=test
+
+#server 서버 포트 , 주소값변경
+server.servlet.context-path=/test
+server.port=8888
