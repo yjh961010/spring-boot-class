@@ -31,7 +31,7 @@ public class BoardController {
 	@PostMapping("/write_board.do")
 	private String writeBoard1(BoardDTO dto) {
 		int res = boardMapper.insertBoard(dto);
-		return "/list";
+		return "redirect:/list_board.do";
 	}
 	@RequestMapping("/content_board.do")
 	private String contentBoard(int num) {
@@ -45,7 +45,7 @@ public class BoardController {
 	@RequestMapping("/updatePro_board.do")
 	private String updateForm(int num) {
 		int res = boardMapper.updateBoard(num);
-		return "/list";
+		return "redirect:/list_board.do";
 	}
 	@RequestMapping("/deleteForm_board.do")
 	private String delete() {
@@ -54,6 +54,6 @@ public class BoardController {
 	@RequestMapping("/deletePro_board.do")
 	private String deleteForm(int num) {
 		int res = boardMapper.deleteBoard(num);
-		return "/list";
+		return "redirect:/list_board.do";
 	}
 }
